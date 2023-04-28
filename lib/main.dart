@@ -1,16 +1,10 @@
-import 'package:cat_trivia/core/AppManager/color_manager.dart';
-import 'package:cat_trivia/core/ServiceLocator/service_locator.dart';
-import 'package:cat_trivia/feature/CatFacts/presentation/manager/home_page_bloc.dart';
-import 'package:cat_trivia/feature/CatFacts/presentation/pages/home_page.dart';
+import 'package:cat_trivia/core/app_manager/color_manager.dart';
+import 'package:cat_trivia/core/service_locator/service_locator.dart';
+import 'package:cat_trivia/feature/cat_facts/presentation/manager/home_page_bloc.dart';
+import 'package:cat_trivia/feature/cat_facts/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/adapters.dart';
 
-import 'feature/CatFacts/data/local/models/cat_fact_entity_adapter.dart';
-import 'feature/CatFacts/data/local/models/cat_fact_model_adapter.dart';
-import 'feature/CatFacts/data/remote/models/cat_fact_model.dart';
-import 'feature/CatFacts/domain/entities/cat_fact_entity.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
