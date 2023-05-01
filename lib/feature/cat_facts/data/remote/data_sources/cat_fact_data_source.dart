@@ -7,6 +7,10 @@ import 'package:cat_trivia/feature/cat_facts/data/remote/models/cat_fact_model.d
 import 'package:dio/dio.dart';
 import 'package:hive_flutter/adapters.dart';
 
+
+
+
+
 class CatFactDataSource {
   Future<CatFactModel> getCatFact() async {
     try {
@@ -14,7 +18,11 @@ class CatFactDataSource {
           await ServiceLocator.getIt.get<ApiService>().getCatFact("cat", 1);
       final fact = CatFactModel.fromJson(response.data);
 
-     final box = Hive.box<CatFactModel>('cat');
+
+
+
+
+      final box = Hive.box<CatFactModel>('cat');
 
       await box.add(fact);
 

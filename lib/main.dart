@@ -5,6 +5,8 @@ import 'package:cat_trivia/feature/cat_facts/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'my_widget_binding_observer.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +14,8 @@ Future<void> main() async {
   await ServiceLocator.initHive();
 
   await ServiceLocator.setup();
+  // register the custom WidgetsBindingObserver
+  WidgetsBinding.instance.addObserver(MyWidgetsBindingObserver());
   runApp(const MyApp());
 }
 
